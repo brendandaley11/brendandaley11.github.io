@@ -1,3 +1,3 @@
 # brendandaley11.github.io
 
-Website to hold all of my relevant projects in a portfolio.
+Portfolio website to showcase all of my relevant university projects completed over my degree.
