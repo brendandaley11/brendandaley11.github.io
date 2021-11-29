@@ -5,45 +5,50 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Bebas+Neue&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/3b9da6a3b3.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
+
+        <script src="https://kit.fontawesome.com/3b9da6a3b3.js" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="assets/scripts.js" type="text/javascript"></script>
+
 
         <title>Brendan Daley - Portfolio</title>
     </head>
 
     <body>
         <header>
-        <div class="header fade_in">
-            <h1 class="title">Hi! I'm <span class="emphasis">Brendan Daley</span>. <br /><br /> <a href="#aboutme">Get started.</a></h1>
+        <div id="header" class="header fade_in">
+            <h1 class="title">Hi! I'm <span class="emphasis">Brendan Daley</span>.</h1>
+            <h2 class="subtitle"><a class="subtitle" href="#aboutme">Get started.</a></h2>
             <div class="colour_overlay"></div>
-
         </div>
-
-
         </header>
+        
         <div class="grid">
             <div class="page_nav">
                 <div class="links">
                     <ul>
                         <li><a href = "#aboutme">About Me</a></li>
                         <li><a href = "#programmingknowledge">Programming Knowledge</a></li>
-                        <li><a href = "">Key Skills</a></li>
-                        <li><a href = "">Projects</a></li>
-                        <li><a href = "">Contact</a></li>
+                        <li><a href = "#keyskills">Key Skills</a></li>
+                        <li><a href = "#projects">Projects</a></li>
+                        <li><a href = "#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
             <div class="item_icons">
                 <div class="links">
                     <ul>
-                        <li><a href = "https://github.com/brendandaley11" title="GitHub"><i class="fab fa-github"></i></a></li>
-                        <li><a href = "https://www.linkedin.com/in/brendan-daley-584a87207/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
-                        <li><a href="" title="Resume/CV"><i class="fas fa-file-alt"></i></a></li>
+                        <li><a href = "https://github.com/brendandaley11" title="GitHub"><i class="fab fa-github menu_icon"></i></a></li>
+                        <li><a href = "https://www.linkedin.com/in/brendan-daley-584a87207/" title = "LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a href = "assets/Resume.pdf" title = "Resume/CV" target = "_blank" rel = "nooperner noreferrer" ><i class="fas fa-file-alt"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
+
         <div id="aboutme"></div>
+
         <div class="intro_section">
             <p class="intro_title">
                 Who am I?
@@ -55,10 +60,10 @@
                             Hey there! My name is Brendan Daley. I am a recent Bachelor of Information Technology graduate from the University of Newcastle.
                             <br />
                             <br />
-                            I have a love for all things technology, especially Software Development.
+                            I have a love for all things technology, especially Software Development. I am always excited and eager to develop my coding skills.
                             <br />
                             <br />
-                            Within this portfolio you can find my past education, experience and projects that I have worked on.
+                            Within this portfolio you can find what I'm experienced with, my key skills as well as the projects I have worked on.
                             <br />
                             <br />
                         </p>
@@ -68,9 +73,12 @@
                     </div>
                 </div>
             <hr>
+            <div id="programmingknowledge"></div>
         </div>
 
-        <div id="programmingknowledge" class="coding_section">
+
+
+        <div class="coding_section">
             <p class="intro_title">
                 Languages I am Proficient in
             </p>
@@ -132,7 +140,264 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="section_under_languages">
+                <p class="intro_text">
+                    On top of these languages, I am willing and eager to learn new languages that I am not yet experienced with.
+                </p>
+            </div>
+            <div id="keyskills"></div>
         </div>
+
+
+
+        <div class="skills_section">
+            <p class="intro_title">
+                Key Skills
+            </p>
+            <hr>
+            <div class="languages_section">
+                <div class="grid4">
+                    <div class="skill2">
+                        <i class="fas fa-code skills_icon"></i>
+                        <p class="intro_text">
+                            Aptitude for Programming
+                        </p>
+                    </div>
+                    <div class="skill1">
+                        <i class="fas fa-paint-brush skills_icon"></i>
+                        <p class="intro_text">
+                            Attention to Detail
+                        </p>
+                    </div>
+                    <div>
+                        <i class="fas fa-comments skills_icon"></i>
+                        <p class="intro_text">
+                            Communication and Organisational Skills
+                        </p>
+                    </div>
+                    <div class="skill3">
+                        <i class="fas fa-ellipsis-h skills_icon"></i>
+                        <p class="intro_text">
+                            ...And many more!
+                        </p>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="section_under_skills">
+                <p class="intro_text">
+                    More of my skills can be found within my Resume.
+                </p>
+            </div>
+            <div id="projects"></div>
+        </div>
+
+
+
+        <div class="skills_section">
+            <p class="intro_title">
+                Projects
+            </p>
+            <hr>
+            <div class="tab">
+                <button class="tablinks" onclick="openProject(event, 'Project1')" id="defaultOpen">New YoUon</button>
+                <button class="tablinks" onclick="openProject(event, 'Project2')">Colour</button>
+                <button class="tablinks" onclick="openProject(event, 'Project3')">MTG Hub</button>
+            </div>
+
+            <div id="Project1" class="tabcontent">
+                <div class="project_grid">
+                    <div class="project_description">
+                        <span class="project_title">New YoUon</span>
+                        <span class="project_subtitle">Orientation website for new university students</span>
+                        <p class="project_desc_text">
+                           New YoUon, a university orientation website designed with new and upcoming first-year university students in mind, was a project created by a team of 5; 
+                           <br />
+                           Myself (acting as Project Manager) and 4 other university students.
+                           <br />
+                           <br />
+                           The New YoUon website offered many different features to new students to help ease them into university life, such as:
+                           <br />
+                           <br />
+                           - Interactive maps for each campus
+                           <br />
+                           - FAQ, which the questions consisting of those from previous University students
+                           <br />
+                           - Visual guides on how to use various online UoN services
+                           <br />
+                           - A collection of all relevant course information (program handbooks, details of Program Advisors/Convenors etc.), stored within a database.
+                        </p>
+                    </div>
+                    <div class="project_image">
+                        <p class="intro_text">
+                            <img class ="project_image_source" src = "assets/newyouon_screenshot.png">
+                            <div class = "image_subtitle">
+                                Screenshot of the homepage of New YoUon.
+                            </div>
+                            <br />
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <div class="project_grid">
+                    <div class="languages_section">
+                        <p class="project_bottom_section">
+                            Languages used
+                            <br />
+                            <br />
+                            <i class="devicon-csharp-plain project_code_icon"></i> <i class="devicon-html5-plain project_code_icon"></i> <i class="devicon-css3-plain project_code_icon"></i> <i class="devicon-javascript-plain project_code_icon"></i> <i class="devicon-mysql-plain project_code_icon"></i>
+                        </p>
+                    </div>
+                    <div class="languages_section">
+                        <p class="project_bottom_section">
+                            GitHub Repo
+                            <br />
+                            <br />
+                            <a href = "https://github.com/brendandaley11/COMP3851-Team1" title="GitHub Repo"><i class="fab fa-github github_repo"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="Project2" class="tabcontent">
+                <div class="project_grid">
+                    <div class="project_description">
+                        <span class="project_title">Colour</span>
+                        <span class="project_subtitle">A 2D Platforming Video Game</span>
+                        <p class="project_desc_text">
+                            Colour, a two-dimensional platforming video created in Unity 2D. With a familiar retro feel, the game offers a fun story and gameplay experience for players of all ages.
+                            <br />
+                            <br />
+                            The game is simple in nature, utilising simple, easy to pick up controls and a simple objective; collect 7 different coins throughout each level whilst overcoming obstacles and enemies.
+                            <br />
+                            <br />
+                            Colour was heavily inspired by older platforming video games, such as Super Mario Bros, and this is shown both in the aesthetic and gameplay of the game. It utilises a monochrome colour scheme (bar some objects) to help give a feeling of nostalgia.
+                            <br />
+                            <br />
+                            Colour offers 3 distinct levels for the player to go through, which each level increasing in difficulty and a changing level aesthetic.
+                        </p>
+                    </div>
+                    <div class="project_image">
+                        <p class="intro_text">
+                            <img class ="project_image_source" src = "assets/colour_screenshot.png">
+                            <div class = "image_subtitle">
+                                Gameplay screenshot of Level 1.
+                            </div>
+                            <br />
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <div class="project_grid">
+                    <div class="languages_section">
+                        <p class="project_bottom_section">
+                            Languages used
+                            <br />
+                            <br />
+                            <i class="devicon-csharp-plain project_code_icon"></i>
+                        </p>
+                    </div>
+                    <div class="languages_section">
+                        <p class="project_bottom_section">
+                            GitHub Repo
+                            <br />
+                            <br />
+                            <a href = "https://github.com/brendandaley11/colour_2dplatformer" title="GitHub Repo"><i class="fab fa-github github_repo"></i></a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div id="Project3" class="tabcontent">
+                <div class="project_grid">
+                    <div class="project_description">
+                        <span class="project_title">MTG Hub</span>
+                        <span class="project_subtitle">An eCommerce website</span>
+                        <p class="project_desc_text">
+                            MTG Hub is an eCommerce store created to offer Magic: The Gathering fans a place to purchase various Magic: The Gathering products. Users can create an account with MTG Hub, browse product listings, add items to their cart, purchase items and have items sent to their address.
+                            <br />
+                            <br />
+                            Simplicity, consistency and the overall user experience were kept in mind whilst designing the user interface.
+                            <br />
+                            <br />
+                            All product and user information is stored within a database. Admins can access the information within this database through the website itself; updating/deleting/adding new products and managing users.
+                            <br />
+                            <br />
+                            MTG Hub utilises the n-tier architecture to provide an eCommerce experience to users.
+                        </p>
+                    </div>
+                    <div class="project_image">
+                        <p class="intro_text">
+                            <img class ="project_image_source" src = "assets/mtghub_screenshot.png">
+                            <div class = "image_subtitle">
+                                Screenshot of the Product List page.
+                            </div>
+                            <br />
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <div class="project_grid">
+                    <div class="languages_section">
+                        <p class="project_bottom_section">
+                            Languages used
+                            <br />
+                            <br />
+                            <i class="devicon-csharp-plain project_code_icon"></i> <i class="devicon-dotnetcore-plain project_code_icon"></i> <i class="devicon-html5-plain project_code_icon"></i> <i class="devicon-css3-plain project_code_icon"></i> <i class="devicon-javascript-plain project_code_icon"></i> <i class="devicon-mysql-plain project_code_icon"></i>
+                        </p>
+                    </div>
+                    <div class="languages_section">
+                        <p class="project_bottom_section">
+                            GitHub Repo
+                            <br />
+                            <br />
+                            <a href = "https://github.com/brendandaley11/mtghub_website" title="GitHub Repo"><i class="fab fa-github github_repo"></i></a>
+                        </p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="contact"></div>
+
+        <div class="contact_section">
+            <p class="intro_title">
+                Contact Me
+            </p>
+            <hr>
+                <div class="grid2">
+                    <div class="self">
+                        <p class="intro_text">
+                            Have any further questions about myself or my projects?
+                            <br />
+                             Please don't hesitate to reach out to me via one of the following methods of contact!
+                        </p>
+                    </div>
+                    <div class="self">
+                        <p class="intro_text">
+                            Email: brendandaley11@gmail.com
+                            <br />
+                            <br />
+                            Contact no: 0412944569
+                            <br />
+                            <br />
+                            GitHub: https://github.com/brendandaley11
+                            <br />
+                            <br />
+                            LinkedIn: https://www.linkedin.com/in/brendan-daley-584a87207/
+                        </p>
+                    </div>
+                </div>
+            <hr>
+            <div id="programmingknowledge"></div>
+        </div>
+
+        
     </body>
+
+    <script>
+        document.getElementById("defaultOpen").click();
+    </script>
 
 </html>

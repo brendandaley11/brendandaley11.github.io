@@ -1,6 +1,6 @@
 * {
     font-family: 'Arvo', serif;  
-
+    box-sizing: border-box;
     color: white;
 }
 
@@ -15,15 +15,15 @@ body {
     margin: 0;
 }
 
-.header {
+#header {
     background: #222629 url("header_bg.gif");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
     height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    display: grid;
+    place-content: center;
     align-items: center;
     text-align: center;
     position: relative;
@@ -38,6 +38,8 @@ body {
     opacity: 0.5;
     position: absolute;
 }
+
+
 
 .grid {
   background-color: #474B4F;
@@ -81,7 +83,15 @@ body {
 }
 
 .code_icon {
-  font-size: 75px;
+  font-size: 4vw;
+}
+
+.skills_icon {
+  font-size: 4vw !important;
+}
+
+.skills_icon:hover {
+  color: white !important;
 }
 
 .link_to_page_button {
@@ -91,6 +101,13 @@ body {
 .title {
     font-size: 100px;
     z-index: 1;
+}
+
+.subtitle {
+  font-size: 75px;
+  z-index: 1;
+  text-decoration: none;
+  color: #86C232;
 }
 
 
@@ -120,6 +137,24 @@ body {
   text-align: center;
 }
 
+.skills_section {
+  padding: 20px;
+  margin: 80px 80px 80px 80px;
+  border-radius: 30px;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
+
+.projects_section {
+  padding: 20px;
+  margin: 80px 80px 80px 80px;
+  border-radius: 30px;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
+
 .languages_section {
   padding: 30px;
   border-radius: 30px;
@@ -128,9 +163,18 @@ body {
   text-align: center;
 }
 
+.contact_section {
+  padding: 20px;
+  margin: 80px 80px 80px 80px;
+  border-radius: 30px;
+  color: black;
+  background-color: white;
+  text-align: center;
+}
+
 .intro_title {
   color: #61892F;
-  font-size: 50px;
+  font-size: 2.4vw;
 }
 
 .intro_text {
@@ -138,7 +182,7 @@ body {
   justify-content: center;
   align-items: center;
   color: black;
-  font-size: 20px;
+  font-size: 1.1vw;
 }
 
 .self {
@@ -221,7 +265,7 @@ body {
 
 .links li {
   list-style: none;
-  font-size: 20px;
+  font-size: 1.1vw;
 }
 
 .links li a {
@@ -235,7 +279,7 @@ body {
 }
 
 .fab {
-  font-size: 35px;
+  font-size: 2vw;
 }
 
 .fab:hover {
@@ -243,10 +287,153 @@ body {
 }
 
 .fas {
-  font-size: 35px;
+  font-size: 2vw;
 }
 
 .fas:hover {
   color: #86C232;
 }
 
+.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 20;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: #474B4F;
+  border-radius: 30px;
+}
+
+.tablinks {
+  font-size: 0.8vw;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+.tabcontent{
+  animation: fadeEffect 1s;
+}
+
+
+.tab button:hover {
+  background-color:#a7d16b;
+}
+
+.tab button.active {
+  background-color:#94d33b;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.project_grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+}
+
+.project_title {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  color: black;
+  font-size: 2.1vw;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+.project_subtitle {
+  display: flex;
+  justify-content: left;
+  align-items: left;
+  color: black;
+  font-size: 0.8vw;
+  padding-left: 30px;
+  font-style: italic;
+}
+
+.image_subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 0.8vw;
+  padding-left: 30px;
+  font-style: italic;
+}
+
+.image_subtitle_text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 0.8vw;
+  padding-left: 30px;
+  font-style: italic;
+}
+
+.project_desc_text {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  color: black;
+  font-size: 0.9vw;
+}
+
+.project_bottom_section {
+  color: black;
+  font-size: 0.9vw;
+}
+
+.github_repo {
+  color: white !important;
+}
+
+.github_repo:hover {
+  color: black !important;
+}
+
+.project_image_source {
+  width: 39vw;
+  height: auto;
+  border: 1px solid #61892F;
+}
+
+.project_code_icon {
+  font-size: 2vw;
+}
+
+.project_code_icon:hover {
+  font-size: 3vw;
+  animation: icon_enlarge 0.2s;
+}
+
+@keyframes icon_enlarge {
+  0% {
+    font-size: 2vw;
+  }
+
+  100% {
+    font-size: 3vw;
+  }
+}
